@@ -21,8 +21,8 @@ class Song < ActiveRecord::Base
 
   def note_ids=(contents)
     contents.each do |content|
-      post = Post.find(id)
-      self.posts << post
+      note = Note.find(id)
+      self.notes << note
     end
   end
 end
