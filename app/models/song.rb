@@ -25,4 +25,12 @@ class Song < ActiveRecord::Base
       self.notes << note
     end
   end
+
+  def note_contents
+    return_array = Array.new
+    self.notes.each do |note|
+      return_array << note.content
+    end
+    return_array
+  end
 end
